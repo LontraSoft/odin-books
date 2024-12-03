@@ -18,15 +18,6 @@ function addBookToLibrary(book) {
     myLibrary.push(book);
 }
 
-
-const myTable = document.createElement("table");
-const headerRow = document.createElement("tr");
-const headerCell = document.createElement("th");
-
-headerCell.textContent = "Book Name";
-headerRow.appendChild(headerCell);
-myTable.appendChild(headerRow);
-
 function displayBooks() {
     let tableRows = myTable.querySelectorAll("tr");
 
