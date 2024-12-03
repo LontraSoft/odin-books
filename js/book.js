@@ -12,6 +12,11 @@ function addBookToLibrary(book) {
 }
 
 const body = document.querySelector("body");
+const addBookDialog = document.querySelector("#add-book-dialog");
+const addBookBtn = document.querySelector("#add-book-btn");
+const cancelAddBookBtn = document.querySelector("#cancel-add-book-btn");
+const submitAddBookBtn = document.querySelector("#submit-add-book-btn");
+
 const myTable = document.createElement("table");
 const headerRow = document.createElement("tr");
 const headerCell = document.createElement("th");
