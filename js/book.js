@@ -6,6 +6,7 @@ const addBookDialog = document.querySelector("#add-book-dialog");
 const addBookBtn = document.querySelector("#add-book-btn");
 const cancelAddBookBtn = document.querySelector("#cancel-add-book-btn");
 const submitAddBookBtn = document.querySelector("#submit-add-book-btn");
+const libraryTable = document.querySelector("#library");
 
 // Functions related to book and library
 function Book(title, author = "", pages = undefined, read = false) {
