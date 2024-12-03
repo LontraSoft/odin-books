@@ -1,0 +1,18 @@
+table {
+    border-collapse: collapse;
+}
+
+th, td {
+    height: 50px;
+    width: 100px;
+    border: 1px solid black;
+    text-align: center;
+}
+
+td[data-read="true"] {
+    background-color: green;
+}
+
+td[data-read="false"] {
+    background-color: red;
+}
