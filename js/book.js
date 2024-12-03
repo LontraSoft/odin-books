@@ -39,15 +39,7 @@ function displayBooks() {
 }
 
 // Functions related to DOM elements
-let hobbit = new Book("The Hobbit");
-let wheelOfTime = new Book("The Wheel of Time");
 
-addBookToLibrary(hobbit);
-addBookToLibrary(wheelOfTime);
 
-displayBooks();
 
-let lordOfTheRings = new Book("Lord of the Rings");
-addBookToLibrary(lordOfTheRings);
 
-displayBooks();
