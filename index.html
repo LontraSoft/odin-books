@@ -22,4 +22,32 @@
     </table>
     <button type="custom" id="add-book-btn">Add Book</button>
   </body>
+
+  <template>
+    <dialog id="add-book-dialog">
+      <form id="add-book-form">
+	<label for="book-name">Name:</label>
+	<input type="text" id="book-name" name="name" aria-required="true" required>
+
+	<label for="book-author">Author:</label>
+	<input type="text" id="book-author" name="author">
+
+	<label for="book-title">Title:</label>
+	<input type="text" id="book-title" name="title">
+
+	<label for="book-page-count">Page Count:</label>
+	<input type="numeric" id="book-page-count" name="pageCount">
+
+	<label for="book-read">Read:</label>
+	<div class="switch">
+	  <input type="checkbox" id="book-read" name="read">
+	  <span class="slider ground"></span>
+	</div>
+	
+	<button type="custom">Cancel</button>	
+	<button type="submit">Add Book</button>
+      </form>
+    </dialog>
+  </template>
+      
 </html>
