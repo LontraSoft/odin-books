@@ -15,10 +15,6 @@ function Book(title, author = "", pages = undefined, read = false) {
     this.read = read;
 }
 
-function addBookToLibrary(book) {
-    myLibrary.push(book);
-}
-
 function displayBooks() {
     let tableRows = myTable.querySelectorAll("tr");
 
