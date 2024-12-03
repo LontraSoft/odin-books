@@ -62,6 +62,11 @@ function cancelAddBook() {
     addBookDialog.close();
 }
 
+function removeBookRow(rowNumber) {
+    myLibrary.splice(rowNumber, 1);
+    displayBooks();
+}
+
 function submitBookForm(event) {
     event.preventDefault();
     let title = document.querySelector("#book-title").value;
