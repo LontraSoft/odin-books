@@ -7,6 +7,7 @@ const addBookBtn = document.querySelector("#add-book-btn");
 const cancelAddBookBtn = document.querySelector("#cancel-add-book-btn");
 const submitAddBookBtn = document.querySelector("#submit-add-book-btn");
 
+// Functions related to book and library
 function Book(title, author = "", pages = undefined, read = false) {
     this.title = title;
     this.author = author;
@@ -37,6 +38,7 @@ function displayBooks() {
     }
 }
 
+// Functions related to DOM elements
 let hobbit = new Book("The Hobbit");
 let wheelOfTime = new Book("The Wheel of Time");
 
