@@ -31,11 +31,18 @@ function displayBooks() {
 	const readData = document.createElement("td");
 	const removeData = document.createElement("td");
 	const removeBtn = document.createElement("button");
+	const readToggle = document.createElement("button");
 
 	titleData.textContent = myLibrary[i].title;
 	authorData.textContent = myLibrary[i].author;
 	pagesData.textContent = myLibrary[i].pages;
 	readData.dataset.read = myLibrary[i].read ? true : false;
+
+	readToggle.type = "button";
+	readToggle.className = "read-toggle";
+	readToggle.textContent = "Toggle Read";
+	readToggle.addEventListener("click", () => toggleRead(i));
+	readData.appendChild(readToggle);
 
 	removeBtn.type = "button";
 	removeBtn.className = "remove-button";
@@ -64,6 +71,11 @@ function cancelAddBook() {
 
 function removeBookRow(rowNumber) {
     myLibrary.splice(rowNumber, 1);
+    displayBooks();
+}
+
+function toggleRead(rowNumber) {
+    myLibrary[rowNumber].read = !myLibrary[rowNumber].read;
     displayBooks();
 }
 
