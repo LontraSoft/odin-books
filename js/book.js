@@ -62,8 +62,21 @@ function cancelAddBook() {
     addBookDialog.close();
 }
 
+function submitBookForm(event) {
+    event.preventDefault();
+    let title = document.querySelector("#book-title").value;
+    let author = document.querySelector("#book-author").value;
+    let pages = document.querySelector("#book-page-count").value;
+    let read = document.querySelector("#book-read").value;
+    const book = new Book(title, author, pages, read);
 
+    myLibrary.push(book);
+    
+    addBookDialog.close();
+    displayBooks();
+}
 
 // Create event listeners
 addBookBtn.addEventListener("click", activateAddBookDialog);
 cancelAddBookBtn.addEventListener("click", cancelAddBook);
+submitAddBookBtn.addEventListener("click", submitBookForm);
