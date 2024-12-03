@@ -39,7 +39,12 @@ function displayBooks() {
 }
 
 // Functions related to DOM elements
+function activateAddBookDialog() {
+    addBookDialog.showModal();
+}
 
 
 
 
+// Create event listeners
+addBookBtn.addEventListener("click", activateAddBookDialog);
