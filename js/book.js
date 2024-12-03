@@ -43,8 +43,12 @@ function activateAddBookDialog() {
     addBookDialog.showModal();
 }
 
+function cancelAddBook() {
+    addBookDialog.close();
+}
 
 
 
 // Create event listeners
 addBookBtn.addEventListener("click", activateAddBookDialog);
+cancelAddBookBtn.addEventListener("click", cancelAddBook);
