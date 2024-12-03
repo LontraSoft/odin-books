@@ -1,7 +1,10 @@
 const myLibrary = [];
 
-function Book(bookName) {
-    this.name = bookName; 
+function Book(title, author = "", pages = undefined, read = false) {
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.read = read;
 }
 
 function addBookToLibrary(book) {
