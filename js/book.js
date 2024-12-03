@@ -1,5 +1,12 @@
 const myLibrary = [];
 
+// DOM
+const body = document.querySelector("body");
+const addBookDialog = document.querySelector("#add-book-dialog");
+const addBookBtn = document.querySelector("#add-book-btn");
+const cancelAddBookBtn = document.querySelector("#cancel-add-book-btn");
+const submitAddBookBtn = document.querySelector("#submit-add-book-btn");
+
 function Book(title, author = "", pages = undefined, read = false) {
     this.title = title;
     this.author = author;
@@ -11,11 +18,6 @@ function addBookToLibrary(book) {
     myLibrary.push(book);
 }
 
-const body = document.querySelector("body");
-const addBookDialog = document.querySelector("#add-book-dialog");
-const addBookBtn = document.querySelector("#add-book-btn");
-const cancelAddBookBtn = document.querySelector("#cancel-add-book-btn");
-const submitAddBookBtn = document.querySelector("#submit-add-book-btn");
 
 const myTable = document.createElement("table");
 const headerRow = document.createElement("tr");
