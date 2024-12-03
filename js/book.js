@@ -17,21 +17,39 @@ function Book(title, author = "", pages = undefined, read = false) {
 }
 
 function displayBooks() {
-    let tableRows = myTable.querySelectorAll("tr");
+    const libraryTableBody = libraryTable.querySelector("tbody");
 
-    for (let i = 1; i < tableRows.length; i++) {
-	myTable.removeChild(tableRows[i]);
+    while (libraryTableBody.firstChild) {
+	libraryTableBody.removeChild(libraryTableBody.firstChild);
     }
-    for (book in myLibrary) {
+    
+    for (let i = 0; i < myLibrary.length; i++) {
 	const bookRow = document.createElement("tr");
-	const bookEntry = document.createElement("td");
-	bookEntry.textContent = myLibrary[book].name;
-	bookRow.appendChild(bookEntry);
-	myTable.appendChild(bookRow);
-    }
+	const titleData = document.createElement("td");
+	const authorData = document.createElement("td");
+	const pagesData = document.createElement("td");
+	const readData = document.createElement("td");
+	const removeData = document.createElement("td");
+	const removeBtn = document.createElement("button");
 
-    if (!body.contains(myTable)) {
-	body.appendChild(myTable);
+	titleData.textContent = myLibrary[i].title;
+	authorData.textContent = myLibrary[i].author;
+	pagesData.textContent = myLibrary[i].pages;
+	readData.dataset.read = myLibrary[i].read ? true : false;
+
+	removeBtn.type = "button";
+	removeBtn.className = "remove-button";
+	removeBtn.textContent = "Remove";
+	removeBtn.addEventListener("click", () => removeBookRow(i));
+	removeData.appendChild(removeBtn);
+
+	bookRow.appendChild(titleData);
+	bookRow.appendChild(authorData);
+	bookRow.appendChild(pagesData);
+	bookRow.appendChild(readData);
+	bookRow.appendChild(removeData);
+
+	libraryTableBody.appendChild(bookRow);
     }
 }
 
